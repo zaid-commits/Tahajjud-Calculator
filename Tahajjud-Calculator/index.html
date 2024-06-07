@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tahajjud Time Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tahajjud Time Calculator</h1>
+        <div class="input-container">
+            <label for="maghrib">Maghrib Salah Time (Today):</label>
+            <input type="time" id="maghrib" name="maghrib" placeholder="HH:MM" required>
+
+            <label for="fajr">Fajr Salah Time (Tomorrow):</label>
+            <input type="time" id="fajr" name="fajr" placeholder="HH:MM" required>
+        </div>
+
+        <button onclick="calculateTahajjudTime()">Calculate</button>
+
+        <div class="result-container">
+            <label for="result">Tahajjud Time:</label>
+            <div id="result" class="result"></div>
+        </div>
+
+        <div class="additional-info">
+            <h2>Additional Information</h2>
+            <div id="islamic-date"></div>
+            <div id="tahajjud-explanation">
+                <h3>Explanation of Tahajjud</h3>
+                <p>Tahajjud prayers are voluntary prayers offered by Muslims in the late hours of the night. They are a means of drawing closer to Allah and seeking His forgiveness and guidance.</p>
+            </div>
+            <div id="share-button">
+                <button onclick="shareTahajjudTime()">Share Tahajjud Time</button>
+            </div>
+            <div id="notification-settings">
+                <h3>Notification Settings</h3>
+                <!-- Notification settings options can be added here -->
+                <label for="notification-time">Set Notification Time:</label>
+                <input type="time" id="notification-time" name="notification-time" placeholder="HH:MM">
+                <button onclick="setNotification()">Set Notification</button>
+            </div>
+            <div id="feedback-form">
+                <h3>Feedback Form</h3>
+                <!-- Feedback form fields can be added here -->
+                <textarea id="feedback-message" placeholder="Enter your feedback"></textarea>
+                <button onclick="submitFeedback()">Submit Feedback</button>
+            </div>
+        </div>
+
+        <div class="about-developer">
+            <h2>About the Developer</h2>
+            <p>I am a passionate developer with a love for creating useful and meaningful applications. My goal is to make a positive impact through technology and help make the world a better place.</p>
+            <p>Connect with me:</p>
+            <ul class="social-links">
+                <li><a href="http://discordapp.com/users/1167472525589102645" target="_blank">Discord</a></li>
+                <li><a href="https://github.com/zaid-commits" target="_blank">GitHub</a></li>
+                <li><a href="https://twitter.com/zaid_suiii" target="_blank">Twitter</a></li>
+            </ul>
+        </div>
+        
+        
+
+        <div class="dark-mode-toggle">
+            <input type="checkbox" id="dark-mode-toggle-checkbox">
+            <label for="dark-mode-toggle-checkbox">Dark Mode</label>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
