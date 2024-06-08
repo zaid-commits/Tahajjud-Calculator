@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const tahajjudStart = new Date(maghribDate.getTime() + (nightDuration * 2 / 3));
         const result = tahajjudStart.toTimeString().substring(0, 5);
         document.getElementById("result").textContent = result;
+        document.getElementById("result").style.color = getComputedStyle(document.body).color; // Set the time color
 
         // Schedule notification for Tahajjud time
         scheduleTahajjudAlarm(result);
@@ -66,29 +67,28 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Display prayer times
-   // Display prayer times
-function displayPrayerTimes(prayerTimes) {
-    const prayerTimesContainer = document.querySelector(".prayer-times-container");
-    prayerTimesContainer.innerHTML = "";
+    function displayPrayerTimes(prayerTimes) {
+        const prayerTimesContainer = document.querySelector(".prayer-times-container");
+        prayerTimesContainer.innerHTML = "";
 
-    for (const prayer in prayerTimes) {
-        if (prayerTimes.hasOwnProperty(prayer)) {
-            const prayerTimeDiv = document.createElement("div");
-            prayerTimeDiv.classList.add("prayer-time");
+        for (const prayer in prayerTimes) {
+            if (prayerTimes.hasOwnProperty(prayer)) {
+                const prayerTimeDiv = document.createElement("div");
+                prayerTimeDiv.classList.add("prayer-time");
 
-            const prayerNameHeading = document.createElement("h3");
-            prayerNameHeading.textContent = prayer;
+                const prayerNameHeading = document.createElement("h3");
+                prayerNameHeading.textContent = prayer;
 
-            const prayerTimeText = document.createElement("p");
-            prayerTimeText.textContent = prayerTimes[prayer];
+                const prayerTimeText = document.createElement("p");
+                prayerTimeText.textContent = prayerTimes[prayer];
 
-            prayerTimeDiv.appendChild(prayerNameHeading);
-            prayerTimeDiv.appendChild(prayerTimeText);
+                prayerTimeDiv.appendChild(prayerNameHeading);
+                prayerTimeDiv.appendChild(prayerTimeText);
 
-            prayerTimesContainer.appendChild(prayerTimeDiv);
+                prayerTimesContainer.appendChild(prayerTimeDiv);
+            }
         }
     }
-}
 
     // Schedule notification for Tahajjud time
     function scheduleTahajjudAlarm(tahajjudTime) {
