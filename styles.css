@@ -1,0 +1,376 @@
+/* Reset styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Main styles */
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+/* Input container styles */
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+/* Result container styles */
+.result-container {
+    text-align: center;
+}
+
+.result {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Additional info styles */
+.additional-info h3 {
+    margin-bottom: 0.5rem;
+}
+
+#feedback-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.about-developer p {
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.social-links li {
+    margin: 0 0.5rem;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ccc;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode main {
+    background-color: #444;
+}
+
+body.dark-mode .form-group input {
+    background-color: #555;
+    color: #fff;
+    border: 1px solid #666;
+}
+
+body.dark-mode .btn {
+    background-color: #555;
+}
+
+body.dark-mode .btn:hover {
+    background-color: #666;
+}
+
+/* Utility classes */
+.text-center {
+    text-align: center;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header {
+        padding: 0.5rem;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .form-group input {
+        width: 100%;
+    }
+
+    .result {
+        font-size: 1.5rem;
+    }
+
+    .about-developer {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .form-group input {
+        padding: 0.4rem;
+    }
+
+    .btn {
+        padding: 0.4rem 0.8rem;
+    }
+
+    .result {
+        font-size: 1.2rem;
+    }
+
+    .additional-info h3 {
+        font-size: 1rem;
+    }
+
+    #feedback-form textarea {
+        padding: 0.4rem;
+    }
+
+    footer {
+        padding: 0.5rem;
+    }
+
+    .about-developer p {
+        font-size: 0.9rem;
+    }
+
+    .social-links li {
+        margin: 0 0.3rem;
+    }
+}
+
+
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+} */
+
+.prayer-times {
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.prayer-times h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.prayer-times-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.prayer-time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.prayer-time:hover {
+    transform: translateY(-5px);
+}
+
+.prayer-time h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.prayer-time p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Dark mode styles */
+body.dark-mode .prayer-times {
+    background-color: #444;
+    border-color: #666;
+}
+
+body.dark-mode .prayer-time {
+    background-color: #555;
+    border-color: #666;
+    color: #fff;
+}
+
+
+.prayer-times {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.prayer-times h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.prayer-times p {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #666;
+}
+
+.prayer-times p span {
+    font-weight: bold;
+    color: #000;
+}
+
+/* Dark mode styles */
+body.dark-mode .prayer-times {
+    background-color: #444;
+    border-color: #666;
+}
+
+body.dark-mode .prayer-times h2 {
+    color: #fff;
+}
+
+body.dark-mode .prayer-times p {
+    color: #ccc;
+}
+
+body.dark-mode .prayer-times p span {
+    color: #fff;
+}
+/* hey */
